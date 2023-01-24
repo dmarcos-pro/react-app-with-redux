@@ -1,0 +1,13 @@
+
+.button {
+    text-transform: uppercase;
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    span {
+        background-color: red;
+    }
+}

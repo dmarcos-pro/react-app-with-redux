@@ -7,7 +7,7 @@ const ActiveTask = () => {
     const dispatch = useDispatch();
     const store = useSelector((store) => store);
     const activeTask = store.activeTaskReducer.activeTask.map( (task) =>
-    <div className="task-list" key={task.id}>
+    <div key={task.id}>
       <div id={task.id}>{task.title}</div>
       <button onClick={() => { dispatch(removeTask(task.id)); dispatch(removeActiveTask()) }}>Remove</button>
     </div>
@@ -15,7 +15,7 @@ const ActiveTask = () => {
     );
   
   return (
-    <div className="task-list">
+    <div className="active-task">
       {activeTask}
     </div>
   );

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-//import uuid from 'react-uuid';
 import { addTask } from "../actions/taskAction";
+
+// CSS
+import styles from '../styles/btn.module.scss';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -34,7 +36,8 @@ const Form = () => {
                 onChange={(e) => setTitle(e.target.value)} />
         <textarea id="content" value={content}
                   onChange={(e) => setContent(e.target.value)} />
-        <button type="submit">OK</button>
+        <button type="submit" className={styles.button}>OK</button>
+        <p className={styles.button}><span>okkk</span> TEST</p>
       </form>
     </div>
   );
