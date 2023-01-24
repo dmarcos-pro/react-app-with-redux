@@ -10,12 +10,11 @@ const Form = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     let higher = 0;
-    const tasks = store.task.map( (task) => {
+    store.taskReducer.task.map( (task) => {
       higher = task.id > higher ? task.id : 0;
       return higher;
     });

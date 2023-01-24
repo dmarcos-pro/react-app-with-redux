@@ -1,14 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { removeTask } from "../actions/taskAction";
+import { activeTask } from "../actions/taskAction";
 
 const Task = (props) => {
   const dispatch = useDispatch();
   return (
-    <div className="task" id={'task-' + props.id}>
+    <div className="task" id={'task-' + props.id} onClick={() => { dispatch(activeTask(props.id, props.title, props.content)); }}>
       <p>{props.title}</p>
-      <p>{props.content}</p>
-      <button onClick={() => { dispatch(removeTask(props.id)); }}>Remove</button>
     </div>
   );
 

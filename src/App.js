@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Form from "./component/form";
 import TaskList from "./component/tasklist";
+import ActiveTask from "./component/activeTask";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
         <Form />
         <TaskList />
+        <ActiveTask />
       </div>
     </Provider>
   );

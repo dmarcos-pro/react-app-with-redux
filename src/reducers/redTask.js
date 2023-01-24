@@ -4,7 +4,8 @@ const initialState = {
   task: []
 };
 
-const formReducer = (state = initialState, action) => {
+
+const taskReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TASK:
       return {
@@ -20,4 +21,5 @@ const formReducer = (state = initialState, action) => {
       return state;
   }
 };
-export { formReducer };
+
+export { taskReducer };
