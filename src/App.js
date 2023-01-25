@@ -12,9 +12,15 @@ function App() {
   return (
     <Provider store={store}>
       <div>
-        <Form />
-        <TaskList />
-        <ActiveTask />
+        <aside><Form /></aside>
+        <div>
+          <div>
+            <TaskList />
+          </div>
+          <div>
+            <ActiveTask />
+          </div>
+        </div>
       </div>
     </Provider>
   );

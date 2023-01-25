@@ -37,7 +37,6 @@ const Form = () => {
         <textarea id="content" value={content}
                   onChange={(e) => setContent(e.target.value)} />
         <button type="submit" className={styles.button}>OK</button>
-        <p className={styles.button}><span>okkk</span> TEST</p>
       </form>
     </div>
   );
